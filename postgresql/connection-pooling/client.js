@@ -18,7 +18,11 @@ export const testPgClient = async () => {
 
     const start = performance.now();
 
-    const results = await Promise.all([client.query('SELECT pg_sleep(1), 1 AS request'), client.query('SELECT pg_sleep(1), 2 AS request'), client.query('SELECT pg_sleep(1), 3 AS request')]);
+    const results = [];
+
+    results.push(await client.query('SELECT pg_sleep(1), 1 AS request'));
+    results.push(await client.query('SELECT pg_sleep(1), 2 AS request'));
+    results.push(await client.query('SELECT pg_sleep(1), 3 AS request'));
 
     const end = performance.now();
 
