@@ -1,0 +1,20 @@
+{
+  "name": "connection-pooling",
+  "version": "1.0.0",
+  "description": "A lab project demonstrating the differences between PostgreSQL single client and connection pool execution in Node.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/omooladev/backend-lab"
+  },
+  "license": "ISC",
+  "author": "Olawole Omosuyi",
+  "type": "module",
+  "main": "main.js",
+  "scripts": {
+    "pg-client": "node --watch --env-file=.env client.js",
+    "pg-pool": "node --watch --env-file=.env pool.js"
+  },
+  "dependencies": {
+    "pg": "^8.23.1"
+  }
+}
